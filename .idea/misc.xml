@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Java/KotlinKunetsAnton/Formula1/app/src/main/res/layout/activity_main.xml" value="0.23333333333333334" />
+        <entry key="..\:/Java/KotlinKunetsAnton/Formula1/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Java/KotlinKunetsAnton/Formula1/game/src/main/res/drawable/ic_launcher_background.xml" value="0.303" />
+        <entry key="..\:/Java/KotlinKunetsAnton/Formula1/game/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
+        <entry key="..\:/Java/KotlinKunetsAnton/Formula1/square/src/main/res/layout/activity_main.xml" value="0.42256410256410254" />
       </map>
     </option>
   </component>
