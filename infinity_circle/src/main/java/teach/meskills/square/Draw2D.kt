@@ -20,7 +20,8 @@ class Draw2D(context: Context?) : View(context) {
     private var yMove2 = yMove * 2
     private var xMove3 = xMove * 4
     private var yMove3 = yMove * 4
-    private val ballRadius = 45
+    private val scale = resources.displayMetrics.xdpi
+    private val ballRadius = 100 / (scale / 160)
 
 
     override fun onDraw(canvas: Canvas?) {
@@ -34,17 +35,17 @@ class Draw2D(context: Context?) : View(context) {
             isAntiAlias = true
             color = Color.RED
         }
-        canvas?.drawCircle(xPosition.toFloat(), yPosition.toFloat(), 45F, paint)
+        canvas?.drawCircle(xPosition.toFloat(), yPosition.toFloat(), ballRadius, paint)
         paint.apply {
             isAntiAlias = true
             color = Color.BLUE
         }
-        canvas?.drawCircle(xPosition2.toFloat(), yPosition2.toFloat(), 45F, paint)
+        canvas?.drawCircle(xPosition2.toFloat(), yPosition2.toFloat(), ballRadius, paint)
         paint.apply {
             isAntiAlias = true
             color = Color.BLACK
         }
-        canvas?.drawCircle(xPosition3.toFloat(), yPosition3.toFloat(), 45F, paint)
+        canvas?.drawCircle(xPosition3.toFloat(), yPosition3.toFloat(), ballRadius, paint)
         invalidate()
     }
 
@@ -75,5 +76,3 @@ class Draw2D(context: Context?) : View(context) {
         }
     }
 }
-
-

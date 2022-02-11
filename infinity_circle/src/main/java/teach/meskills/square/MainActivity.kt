@@ -20,12 +20,10 @@ class MainActivity : AppCompatActivity() {
         val dr = Draw2D(this)
         setContentView(dr)
             job = scope.launch {
-            withContext(Dispatchers.Main) {
                 while (true) {
                     dr.update()
                     delay(100)
                 }
-            }
         }
     }
 
@@ -37,5 +35,10 @@ class MainActivity : AppCompatActivity() {
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         //  Hide both the status bar and the navigation bar
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        scope.cancel()
     }
 }
